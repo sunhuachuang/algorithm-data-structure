@@ -1,12 +1,15 @@
 # algorithm-data-structure
 算法与数据结构方法的学习记要。
 
+# 离散数学的基础
+[离散数学笔记](https://github.com/sunhuachuang/algorithm-data-structure/tree/master/discrete_mathematics)
+
 # 基础算法的学习
 *基本的算法分析*
 
-1. [枚举]()
-2. [递归]()
-3. [动态规划]()
+1. [枚举](https://github.com/sunhuachuang/algorithm-data-structure/tree/master/algorithm/%E6%9E%9A%E4%B8%BE)
+2. [递归](https://github.com/sunhuachuang/algorithm-data-structure/tree/master/algorithm/%E9%80%92%E5%BD%92)
+3. [动态规划](https://github.com/sunhuachuang/algorithm-data-structure/tree/master/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
 4. [深度与广度优先搜索]()
 5. [二分法]()
 6. [贪心]()

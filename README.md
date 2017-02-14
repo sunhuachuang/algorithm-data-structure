@@ -16,7 +16,8 @@
 
 *基本的数据结构分析*
 
-1. [list: vector 顺序性的列表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/list_vector.py)
+1. [list-vector 顺序的列表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/list_vector.py)
+1. [list-linked 链式的列表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/list_linked.py)
 
 *基本运用*
 

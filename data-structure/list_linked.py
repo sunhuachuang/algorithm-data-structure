@@ -44,7 +44,7 @@ class SingleLinkedList:
         else:
             return self.head_node.cdr()
 
-    # O(n) 第n个元素， 从1开始计数
+    # O(n) 第n个元素， 从1开始计数, 多值同时插入， 其后的时间复杂度O(1)
     def add_element(self, value, n=None):
         add_node = SingleNode(value, None)
         tmp_node = self.head_node
@@ -59,7 +59,7 @@ class SingleLinkedList:
                 tmp_node = tmp_node.cdr()
                 i += 1
 
-    # O(n) 第n个元素， 从1开始计数
+    # O(n) 第n个元素， 从1开始计数, 多值同时删除， 其后的时间复杂度O(1)
     def del_element(self, n):
         tmp_node = self.head_node
         i = 1
@@ -97,5 +97,17 @@ single_linked_list.del_element(2)
 single_linked_list.del_element(100)
 print(single_linked_list)
 
+# 静态链表
+# 有些高级语言中的数组概念 array, 游标实现法, 实质就是用数字代替地址指针, 是顺序空间
 
-# 双向链表
+# 循环链表 从任意点开始遍历整个链表
+# 尾指针的概念，用于O(1)查找原来的头， O(1)查找原来的尾， 合并多个链表，只需要修改尾指针
+
+# 双向链表 double linked list
+class DoubleNode:
+    def __init__(self, value, prev=None, next=None):
+        self.value = value
+        self.prev = prev
+        self.next = next
+
+# 操作类似， 唯一区别就是可以反向查找， 增删的时候需要改两个量

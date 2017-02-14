@@ -4,7 +4,7 @@
 # 离散数学的基础
 [离散数学笔记](https://github.com/sunhuachuang/algorithm-data-structure/tree/master/discrete_mathematics)
 
-# 基础算法的学习
+# 基础算法与数据结构的学习
 *基本的算法分析*
 
 1. [枚举](https://github.com/sunhuachuang/algorithm-data-structure/tree/master/algorithm/%E6%9E%9A%E4%B8%BE)
@@ -13,6 +13,10 @@
 4. [深度与广度优先搜索]()
 5. [二分法]()
 6. [贪心]()
+
+*基本的数据结构分析*
+
+1. [list: vector 顺序性的列表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/list_vector.py)
 
 *基本运用*
 

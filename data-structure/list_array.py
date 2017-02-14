@@ -1,5 +1,5 @@
-# 模拟连续空间的列表
-class VectorList:
+# 模拟连续空间的列表 python's list type is array(array list).
+class ArrayList:
     max_size = 0
     stores = {}
 
@@ -44,16 +44,16 @@ class VectorList:
 
 
 # test
-vector_list = VectorList(10, 'a', 'b', 'c')
-print(vector_list.len())
-print(vector_list.get_key('a'))
-print(vector_list.get_value(1))
+array_list = ArrayList(10, 'a', 'b', 'c')
+print(array_list.len())
+print(array_list.get_key('a'))
+print(array_list.get_value(1))
 
-vector_list.add_element('d')
-print(vector_list.len())
+array_list.add_element('d')
+print(array_list.len())
 
-vector_list.add_element('bbb', 1)
-print(vector_list)
+array_list.add_element('bbb', 1)
+print(array_list)
 
-vector_list.del_element(1)
-print(vector_list)
+array_list.del_element(1)
+print(array_list)

@@ -20,7 +20,7 @@
 1. [list-linked 链式的列表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/list_linked.py)
 1. [stack 栈](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/stack.py)
 1. [queue 队列](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/queue.py)
-1. [string 串](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/string.py)
+1. [string 串 (字符串匹配算法)](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/string.py)
 
 *基本运用*
 

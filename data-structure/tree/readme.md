@@ -21,3 +21,9 @@
 
 ## 树的抽象数据模型
 1. [base tree](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/tree/base.py)
+2. [binary tree 二叉树](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/tree/binary.py)
+
+## 树的存储结构模型
+1. parent表示法
+2. child表示法
+3. child_sibling表示法

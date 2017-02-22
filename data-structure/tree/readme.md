@@ -52,8 +52,6 @@
 1. [二叉链表 三叉链表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/tree/binary.py)
 
 #### 遍历二叉树
-# 遍历二叉树
-
 ```
         A
      B      C

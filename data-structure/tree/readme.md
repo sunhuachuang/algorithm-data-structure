@@ -49,7 +49,22 @@
 
 #### 二叉树的存储结构模型
 1. 完全二叉树的顺序存储结构, 按层序号排列好的.
-1. [二叉树二叉链表 三叉链表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/tree/binary.py)
+1. [二叉链表 三叉链表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/tree/binary.py)
+
+#### 遍历二叉树
+# 遍历二叉树
+
+```
+        A
+     B      C
+   D      E     F
+ G   H      I
+```
+
+1. 前序遍历: 从根结点开始先前序遍历左子树，再遍历右子树。 ABDGHCEIF
+1. 中序遍历: 从根结点开始先中序遍历左子树，再访问根结点，再中序遍历右子树。 GDHBAEICF
+1. 后序遍历: 先叶后结点方式访问左右子树，最后访问根结点。 GHDBIEFCA
+1. 层序遍历: 从根结点开始逐层遍历，同层从左到右。 ABCDEFGHI
 
 ## 树的存储结构模型
 1. parent表示法

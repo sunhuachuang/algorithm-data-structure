@@ -23,6 +23,11 @@
 1. [base tree](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/tree/base.py)
 2. [binary tree 二叉树](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/tree/binary.py)
 
+## 树的存储结构模型
+1. parent表示法
+2. child表示法
+3. child_sibling表示法
+
 ### 二叉树
 二叉树: 每个结点只能有一个或者两个子结点, 而且是有序的左子树和右子树, 即使只有一颗子树, 也要区分左右子树
 #### 特殊的二叉树:
@@ -64,7 +69,15 @@
 1. 后序遍历: 先叶后结点方式访问左右子树，最后访问根结点。 GHDBIEFCA
 1. 层序遍历: 从根结点开始逐层遍历，同层从左到右。 ABCDEFGHI
 
-## 树的存储结构模型
-1. parent表示法
-2. child表示法
-3. child_sibling表示法
+### 一般树转化为二叉树, 森林转为二叉树
+*child_sibling*
+
+*所有的左子结点都是第一个孩子，所有的右子结点都是兄弟*
+
+### [Huffman Tree 赫夫曼树](https://en.wikipedia.org/wiki/Huffman_coding)
+#### 树的路径: root 到 每一个结点的路径长度的和
+#### Huffman Tree: 带权重的路径长度和(WPL)最小二叉树(最优二叉树)
+1. 将叶子结点与其权重按权重排序
+2. 取最小的两个组成一个新结点，较小的为左结点，计算总权重。
+3. 将计算出来的新结点和权重与剩余的比较，重复2步骤
+4. 直到只剩下两个结点， 与第三个新生成的结点组成最后的root结点

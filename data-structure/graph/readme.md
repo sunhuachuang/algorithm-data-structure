@@ -34,7 +34,7 @@
 ```
 ADT Graph
 Data
-    Vertexs, edges
+    Vertexs, ArcOrEdge
 Operation
     create_graph(v, vr)
     destory_graph(g)

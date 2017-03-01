@@ -77,6 +77,7 @@ test.add_arc(a, b, 1)
 test.add_arc(a, c, 2)
 test.add_arc(c, b, 3)
 test.add_arc(d, b, 4)
+
 print(test)
 
 a = VertexNode('A')

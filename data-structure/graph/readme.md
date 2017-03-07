@@ -48,7 +48,7 @@ Operation
     insert_arc(g, v, w)
     delete_arc(g, v, w)
     DFS_traverse(g) #深度优先遍历
-    HFS_traverse(g) #广度优先遍历
+    BFS_traverse(g) #广度优先遍历
 ```
 
 ## 图的存储结构
@@ -57,3 +57,9 @@ Operation
 1. [Orthogonal List 十字链表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/orthogonal_list.py)
 1. [Adjacency Multiple List 邻接多重表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/adjacency_multiple_list.py)
 1. [Arc Array 边集数组](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/arc_array.py)
+
+## 图的遍历
+#### 深度优先遍历
+[Depth First Search](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/depth_first_search.py)
+#### 广度优先遍历
+[Breadth First Search](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/breadth_first_search.py)

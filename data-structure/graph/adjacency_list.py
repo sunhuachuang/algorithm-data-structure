@@ -60,6 +60,17 @@ class AdjacencyList:
             arc2 = ArcNode(weight, v1)
             v2.add_arc(arc2)
 
+    def get_number(self):
+        return len(self.vertex)
+
+    def get_vertex_value(self, key):
+        return self.vertex[key]
+
+    def get_vertex_key(self, value):
+        for key, v in enumerate(self.vertex):
+            if value == v:
+                return key
+
     def __repr__(self):
         print('----------')
         for i in self.vertex:
@@ -67,26 +78,27 @@ class AdjacencyList:
         return '---------'
 
 
-a = VertexNode('A')
-b = VertexNode('B')
-c = VertexNode('C')
-d = VertexNode('D')
+if __name__ == '__main__':
+    a = VertexNode('A')
+    b = VertexNode('B')
+    c = VertexNode('C')
+    d = VertexNode('D')
 
-test = AdjacencyList(False, a, b, c, d)
-test.add_arc(a, b, 1)
-test.add_arc(a, c, 2)
-test.add_arc(c, b, 3)
-test.add_arc(d, b, 4)
+    test = AdjacencyList(False, a, b, c, d)
+    test.add_arc(a, b, 1)
+    test.add_arc(a, c, 2)
+    test.add_arc(c, b, 3)
+    test.add_arc(d, b, 4)
 
-print(test)
+    print(test)
 
-a = VertexNode('A')
-b = VertexNode('B')
-c = VertexNode('C')
-d = VertexNode('D')
-test2 = AdjacencyList(True, a, b, c, d)
-test2.add_arc(a, b, 1)
-test2.add_arc(a, c, 2)
-test2.add_arc(c, b, 3)
-test2.add_arc(d, b, 4)
-print(test2)
+    a = VertexNode('A')
+    b = VertexNode('B')
+    c = VertexNode('C')
+    d = VertexNode('D')
+    test2 = AdjacencyList(True, a, b, c, d)
+    test2.add_arc(a, b, 1)
+    test2.add_arc(a, c, 2)
+    test2.add_arc(c, b, 3)
+    test2.add_arc(d, b, 4)
+    print(test2)

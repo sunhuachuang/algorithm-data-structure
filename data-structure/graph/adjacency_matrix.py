@@ -25,6 +25,15 @@ class AdjacencyMatrix:
         if not self.directed:
             self.arc[index2][index1] = weight
 
+    def has_arc(self, k1, k2):
+        return self.arc[k1][k2]
+
+    def get_number(self):
+        return len(self.vertex)
+
+    def get_vertex_value(self, key):
+        return self.vertex[key]
+
     def __repr__(self):
         number = len(self.vertex)
         for index1 in range(number):
@@ -32,16 +41,17 @@ class AdjacencyMatrix:
                 print(self.vertex[index1], ' -> ', self.vertex[index2], ' : ', self.arc[index1][index2])
         return "\n"
 
-test = AdjacencyMatrix(False, 'A', 'B', 'C', 'D')
-test.insert_arc('A', 'B', 1)
-test.insert_arc('A', 'C', 2)
-test.insert_arc('C', 'B', 3)
-test.insert_arc('D', 'B', 4)
-print(test)
+if __name__ == '__main__':
+    test = AdjacencyMatrix(False, 'A', 'B', 'C', 'D')
+    test.insert_arc('A', 'B', 1)
+    test.insert_arc('A', 'C', 2)
+    test.insert_arc('C', 'B', 3)
+    test.insert_arc('D', 'B', 4)
+    print(test)
 
-test2 = AdjacencyMatrix(True, 'A', 'B', 'C', 'D')
-test2.insert_arc('A', 'B', 1)
-test2.insert_arc('A', 'C', 2)
-test2.insert_arc('C', 'B', 3)
-test2.insert_arc('D', 'B', 4)
-print(test2)
+    test2 = AdjacencyMatrix(True, 'A', 'B', 'C', 'D')
+    test2.insert_arc('A', 'B', 1)
+    test2.insert_arc('A', 'C', 2)
+    test2.insert_arc('C', 'B', 3)
+    test2.insert_arc('D', 'B', 4)
+    print(test2)

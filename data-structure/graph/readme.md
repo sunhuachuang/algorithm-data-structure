@@ -63,3 +63,9 @@ Operation
 [Depth First Search](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/depth_first_search.py)
 #### 广度优先遍历
 [Breadth First Search](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/breadth_first_search.py)
+
+## 最小生成树 Minimum Cost Spanning Tree
+构造连通网的最小代价生成树称为最小生成树
+
+1. [Prim 普里姆算法](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/prim.py)
+2. [Kruskal 克鲁斯卡尔算法](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/kruskal.py)

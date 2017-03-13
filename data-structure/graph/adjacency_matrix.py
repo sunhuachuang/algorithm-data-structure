@@ -34,6 +34,14 @@ class AdjacencyMatrix:
     def get_vertex_value(self, key):
         return self.vertex[key]
 
+    def get_vertex_key(self, v):
+        for key, value in enumerate(self.vertex):
+            if value == v:
+                return key
+
+    def get_vertex_outdegrees(self, key):
+        return self.arc[key]
+
     def __repr__(self):
         number = len(self.vertex)
         for index1 in range(number):

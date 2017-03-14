@@ -26,7 +26,10 @@ class AdjacencyMatrix:
             self.arc[index2][index1] = weight
 
     def has_arc(self, k1, k2):
-        return self.arc[k1][k2]
+        return bool(self.arc[k1][k2])
+
+    def get_arc(self, k1, k2, default=0):
+        return self.arc[k1][k2] if self.arc[k1][k2] else default
 
     def get_number(self):
         return len(self.vertex)

@@ -3,7 +3,7 @@
 # 选取第一个点之后，讲第一个点的边中选出最近的, 产生第二个点
 # 从第一个点和第二个点中的边上选出下一个最近的点, 产生第三个点
 # 从第一个点, 第二个点, 第三个点的边中选出下一个最近的点, 产生第四个点
-# 以此类推到最后一个点
+# 以此类推到最后一个点 TODO Think this lowcast variable
 # O(n^2)
 
 from adjacency_matrix import AdjacencyMatrix

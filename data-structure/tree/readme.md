@@ -1,4 +1,4 @@
-# 树 Tree
+## 树 Tree
 *相关概念*
 
 1. Root(根结点)
@@ -19,18 +19,18 @@
 1. 有序树和无序树, 所有子树从左到右是否都不能互换
 1. Forest (森林) m >= 0 互不相交的 tree, 对每个结点而言, 其子树的集合就是一个forest
 
-## 树的抽象数据模型
+### 树的抽象数据模型
 1. [base tree](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/tree/base.py)
 2. [binary tree 二叉树](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/tree/binary.py)
 
-## 树的存储结构模型
+### 树的存储结构模型
 1. parent表示法
 2. child表示法
 3. child_sibling表示法
 
-### 二叉树
+#### 二叉树
 二叉树: 每个结点只能有一个或者两个子结点, 而且是有序的左子树和右子树, 即使只有一颗子树, 也要区分左右子树
-#### 特殊的二叉树:
+##### 特殊的二叉树:
 1. **斜树**: 每个结点只有左子树, 称为左斜树, 同理, 右斜树.
   1. *结点个数等于树的深度 (类似线性表)*
 2. **满二叉树**: 所有分支结点都有左右子树, 而且所有叶子都在同一层.
@@ -42,7 +42,7 @@
   4. *如果该结点的度为1, 则只有左结点*
   5. *同样个数的二叉树, 完全二叉树的深度最小*
 
-#### 二叉树的性质
+##### 二叉树的性质
 1. 在i层最多有 ```2^(i-1)``` 个结点
 1. 深度为k的二叉树, 最多有 ```2^k - 1``` 个结点
 1. 任何二叉树, 终端结点数为n0, 度为2的结点数为n2, 则 ```n0 = n2 + 1```, 由 ```n=n0+n1+n2``` 与 ```n-1=n1+2n2```线总数, 可以推出
@@ -52,11 +52,11 @@
   2. 如果 2i > n, 则结点i无左子树(i为叶子结点), 否则左子树是结点2i
   3. 如果 2i + 1 > n, 则结点i无右子树, 否则右子树是结点 2i+1
 
-#### 二叉树的存储结构模型
+##### 二叉树的存储结构模型
 1. 完全二叉树的顺序存储结构, 按层序号排列好的.
 1. [二叉链表 三叉链表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/tree/binary.py)
 
-#### 遍历二叉树
+##### 遍历二叉树
 ```
         A
      B      C
@@ -69,14 +69,14 @@
 1. 后序遍历: 先叶后结点方式访问左右子树，最后访问根结点。 GHDBIEFCA
 1. 层序遍历: 从根结点开始逐层遍历，同层从左到右。 ABCDEFGHI
 
-### 一般树转化为二叉树, 森林转为二叉树
+#### 一般树转化为二叉树, 森林转为二叉树
 *child_sibling*
 
 *所有的左子结点都是第一个孩子，所有的右子结点都是兄弟*
 
-### [Huffman Tree 赫夫曼树](https://en.wikipedia.org/wiki/Huffman_coding)
-#### 树的路径: root 到 每一个结点的路径长度的和
-#### Huffman Tree: 带权重的路径长度和(WPL)最小二叉树(最优二叉树)
+#### [Huffman Tree 赫夫曼树](https://en.wikipedia.org/wiki/Huffman_coding)
+##### 树的路径: root 到 每一个结点的路径长度的和
+##### Huffman Tree: 带权重的路径长度和(WPL)最小二叉树(最优二叉树)
 1. 将叶子结点与其权重按权重排序
 2. 取最小的两个组成一个新结点，较小的为左结点，计算总权重。
 3. 将计算出来的新结点和权重与剩余的比较，重复2步骤

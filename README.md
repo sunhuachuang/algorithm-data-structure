@@ -1,10 +1,10 @@
 # algorithm-data-structure
 算法与数据结构方法的学习记要。
 
-# 离散数学的基础
+### 数学
 [离散数学笔记](https://github.com/sunhuachuang/algorithm-data-structure/tree/master/discrete_mathematics)
 
-# 基础算法与数据结构的学习
+### 基础算法与数据结构
 *基本的算法分析*
 
 1. [枚举](https://github.com/sunhuachuang/algorithm-data-structure/tree/master/algorithm/%E6%9E%9A%E4%B8%BE)

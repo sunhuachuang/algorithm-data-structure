@@ -1,11 +1,11 @@
-# graph 图
+## graph 图
 由 顶点的有穷非空集合和顶点之间的边的集合组成，通常表示为： G(V,E)，G表示一个图，V表示顶点的集合，E表示边的集合。
 
 1. Vertex: 图中的元素称为顶点
 1. 顶点的非空集合
 1. 任意两点之间都会有关系，顶点之间的逻辑关系用边来表示，边集可以为空。
 
-### 各种概念
+#### 各种概念
 1. ***Edge (无向边)***: 顶点V1 和　V2之间的边没有方向。用无序偶数对(V1, V2)表示
 1. ***Undirected Graph (无向图)***: 任意边都是无向边
 1. ***Arc (弧或有向边)***: V1 V2之间的边有方向。用<V1, V2>表示, V1是弧尾(Tail), V2是弧头(Head)
@@ -30,7 +30,7 @@
 1. ***连通图的生成树***: 连接所有顶点，而且边为n-1
 1. ***有向树***: 只有一个入度为0, 其他入度均为1的有向图。一个有向图可以由若干有向树构成生成森林
 
-## 图的抽象数据类型
+### 图的抽象数据类型
 ```
 ADT Graph
 Data
@@ -51,25 +51,25 @@ Operation
     BFS_traverse(g) #广度优先遍历
 ```
 
-## 图的存储结构
+### 图的存储结构
 1. [Adjacency Matrix 邻接矩阵](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/adjacency_matrix.py)
 1. [Adjacency List 邻接表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/adjacency_list.py)
 1. [Orthogonal List 十字链表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/orthogonal_list.py)
 1. [Adjacency Multiple List 邻接多重表](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/adjacency_multiple_list.py)
 1. [Arc Array 边集数组](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/arc_array.py)
 
-## 图的遍历
+### 图的遍历
 #### 深度优先遍历
 [Depth First Search](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/depth_first_search.py)
 #### 广度优先遍历
 [Breadth First Search](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/breadth_first_search.py)
 
-## 最小生成树 Minimum Cost Spanning Tree
+### 最小生成树 Minimum Cost Spanning Tree
 构造连通网的最小代价生成树称为最小生成树
 
 1. [Prim 普里姆算法](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/prim.py)
 2. [Kruskal 克鲁斯卡尔算法](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/kruskal.py)
 
-## 最短路径
+### 最短路径
 1. [Dijkstra 迪杰斯特拉算法](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/dijkstra.py)
 2. [Floyd 弗洛伊德算法](https://github.com/sunhuachuang/algorithm-data-structure/blob/master/data-structure/graph/floyd.py)

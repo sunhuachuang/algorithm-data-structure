@@ -8,6 +8,7 @@ class ArcNode:
 
 class Arc:
     store = []
+
     def __init__(self, *arc_nodes):
         self.store = list(arc_nodes)
 
@@ -32,6 +33,7 @@ class VertexNode:
 
 class Vertex:
     store = []
+
     def __init__(self, *vertex_nodes):
         self.store = list(vertex_nodes)
 

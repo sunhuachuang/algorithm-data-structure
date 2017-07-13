@@ -47,12 +47,16 @@ class BaseTree:
         pass
 
 # parent表示法
+
+
 class Node:
     def __init__(self, value, parent):
         self.value = value
         self.parent = parent
 
 # parent 与 长子表示法
+
+
 class PFCNode:
     def __init__(self, value, parent, first_child):
         self.value = value
@@ -60,6 +64,8 @@ class PFCNode:
         self.first_child = first_child
 
 # parent first_child right_sibling
+
+
 class PFCRSNode:
     def __init__(self, value, parent, first_child, right_sibling):
         self.value = value
@@ -68,10 +74,12 @@ class PFCRSNode:
         self.right_sibling = right_sibling
 
 # 连续空间
+
+
 class ParentTree(BaseTree):
     store = []
     root = Node()
-    n = 0 # 结点个数
+    n = 0  # 结点个数
 
     def __init__(self, root, n):
         self.root = root
@@ -82,23 +90,30 @@ class ParentTree(BaseTree):
 # child表示法 多重链表表示法
 # 1. 用树的degree作为每个结点默认的子个数
 DEGREE = 5
+
+
 class ChildNode1:
     store = [None for i in range(DEGREE)]
+
     def __init__(self, value, *args):
         self.value = value
         self.store = list(args)
 
 # 2. 用每个结点的度作为子个数
+
+
 class ChildNode2:
     def __init__(self, value, degree, *args):
         self.value = value
         self.degree = degree
         self.store = [args[v] for i in range(degree)]
 
+
 class ChildNode:
     def __init__(self, value, next):
         self.value = value
         self.next = next
+
 
 class SingleChildNode:
     def __init__(self, value, first_child):
@@ -106,14 +121,18 @@ class SingleChildNode:
         self.first_child = first_child
 
 # 改进之后的child_parent表示法, child表示法的升级
+
+
 class SingleParentChildNode:
     def __init__(self, value, parent, first_child):
         self.value = value
         self.parent = parent
         self.first_child = first_child
 
+
 class ChildTree:
     store = []
+
     def __init__(self, n):
         self.store = [SingleParentChildNode() for _ in range(n)]
 
@@ -126,6 +145,8 @@ class ChildSiblingNode:
         self.right_sibling = right_sibling
 
 # child_sibling_parnet
+
+
 class ParentChildSiblingNode:
     def __init__(self, value, parent, first_child, right_sibling):
         self.value = value

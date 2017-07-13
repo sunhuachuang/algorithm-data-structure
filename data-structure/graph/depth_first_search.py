@@ -2,6 +2,7 @@
 # adjacency matrix
 from adjacency_matrix import AdjacencyMatrix
 
+
 def depth_first_search(graph, i):
     global vertex_visited
     vertex_visited[i] = True
@@ -11,11 +12,13 @@ def depth_first_search(graph, i):
         if graph.has_arc(i, j) and not vertex_visited[j]:
             depth_first_search(graph, j)
 
+
 def depth_first_search_traverse(graph):
     global vertex_visited
     for i in range(graph.get_number()):
         if not vertex_visited[i]:
             depth_first_search(graph, i)
+
 
 test = AdjacencyMatrix(False, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I')
 test.insert_arc('A', 'B', 1)
@@ -40,6 +43,8 @@ depth_first_search_traverse(test)
 print('=====================')
 # adjacency list
 from adjacency_list import AdjacencyList, VertexNode
+
+
 def depth_first_search_list(graph, i):
     global vertex_visited_list
     vertex_visited_list[i] = True
@@ -54,6 +59,7 @@ def depth_first_search_list(graph, i):
         if not vertex_visited_list[j]:
             depth_first_search_list(graph, j)
         first_arc = first_arc.next_arc
+
 
 def depth_first_search_traverse_list(graph):
     global vertex_visited_list

@@ -4,6 +4,7 @@ class VertexNode:
         self.value = value
         self.first_edge = value
 
+
 class EdgeNode:
     def __init__(self, weight, ivex=None, ilink=None, jvex=None, jlink=None):
         self.weight = weight

@@ -4,11 +4,12 @@ from queue import Queue
 
 from adjacency_matrix import AdjacencyMatrix
 
+
 def breadth_first_search_traverse(graph):
     number = graph.get_number()
     vertex_visited = [False] * number
     q = Queue()
-    for i in range(number): # foreach only for Directed Graph or not Connected Graph
+    for i in range(number):  # foreach only for Directed Graph or not Connected Graph
         if not vertex_visited[i]:
             q.put(i)
             vertex_visited[i] = True
@@ -21,6 +22,7 @@ def breadth_first_search_traverse(graph):
                     if value and not vertex_visited[j]:
                         vertex_visited[j] = True
                         q.put(j)
+
 
 test = AdjacencyMatrix(False, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I')
 test.insert_arc('A', 'B', 1)
@@ -46,11 +48,12 @@ print('=====================')
 # adjacency list
 from adjacency_list import AdjacencyList, VertexNode
 
+
 def breadth_first_search_traverse_list(graph):
     number = graph.get_number()
     vertex_visited = [False] * number
     q = Queue()
-    for i in range(number): # foreach only for Directed Graph or not Connected Graph
+    for i in range(number):  # foreach only for Directed Graph or not Connected Graph
         if not vertex_visited[i]:
             q.put(i)
             vertex_visited[i] = True
@@ -66,6 +69,7 @@ def breadth_first_search_traverse_list(graph):
                         vertex_visited[j] = True
                         q.put(j)
                     tmp_arc = tmp_arc.next_arc
+
 
 a = VertexNode('A')
 b = VertexNode('B')

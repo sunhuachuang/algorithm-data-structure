@@ -8,8 +8,9 @@
 
 from adjacency_matrix import AdjacencyMatrix
 
+
 def mini_span_tree_prim(graph):
-    MAX = 1000 # max weight
+    MAX = 1000  # max weight
 
     number = graph.get_number()
     adjvex = [0] * number
@@ -34,6 +35,7 @@ def mini_span_tree_prim(graph):
             if lowcast[j] != 0 and graph.get_arc(k, j, MAX) < lowcast[j]:
                 lowcast[j] = graph.get_arc(k, j, MAX)
                 adjvex[j] = k
+
 
 test = AdjacencyMatrix(False, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I')
 test.insert_arc('A', 'B', 10)

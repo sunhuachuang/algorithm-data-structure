@@ -1,8 +1,11 @@
 # Last In First Out LIFO
 # array -> list 模拟
+
+
 class Stack:
     length = 0
     store = []
+
     def __init__(self, *args):
         self.store = list(args)
         self.length = len(self.store)
@@ -14,11 +17,12 @@ class Stack:
         return top_element
 
     def push(self, value):
-        self.store.append(value) # not static store, only can append
+        self.store.append(value)  # not static store, only can append
         self.length += 1
 
     def __len__(self):
         return len(self.store)
+
 
 # test
 s = Stack('a', 'b', 'c')

@@ -2,6 +2,8 @@
 import ctypes
 
 # 单向链表
+
+
 class SingleNode:
     def __init__(self, value, next=None):
         self.value = value
@@ -22,6 +24,7 @@ class SingleNode:
 
     def __repr__(self):
         return 'value: ' + str(self.value)
+
 
 class SingleLinkedList:
     def __init__(self, first_value=None):
@@ -65,7 +68,7 @@ class SingleLinkedList:
         i = 1
         while i < n and tmp_node.cdr():
             tmp_node = tmp_node.cdr()
-            if i+1 == n:
+            if i + 1 == n:
                 if tmp_node.cdr():
                     del_node = tmp_node.cdr()
                     tmp_node.set_cdr(del_node.cdr())
@@ -82,6 +85,7 @@ class SingleLinkedList:
             tmp_node = tmp_node.cdr()
             print(tmp_node)
         return 'count length: ' + str(count)
+
 
 # test
 single_linked_list = SingleLinkedList('a')
@@ -104,6 +108,8 @@ print(single_linked_list)
 # 尾指针的概念，用于O(1)查找原来的头， O(1)查找原来的尾， 合并多个链表，只需要修改尾指针
 
 # 双向链表 double linked list
+
+
 class DoubleNode:
     def __init__(self, value, prev=None, next=None):
         self.value = value

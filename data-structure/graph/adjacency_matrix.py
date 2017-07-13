@@ -7,10 +7,12 @@
 #          C  0  1  0  1
 #          D  1  0  1  0
 
+
 class AdjacencyMatrix:
-    directed = False # is or not directed
+    directed = False  # is or not directed
     vertex = []
     arc = []
+
     def __init__(self, directed, *args):
         self.directed = directed
         number = len(args)
@@ -49,8 +51,10 @@ class AdjacencyMatrix:
         number = len(self.vertex)
         for index1 in range(number):
             for index2 in range(number):
-                print(self.vertex[index1], ' -> ', self.vertex[index2], ' : ', self.arc[index1][index2])
+                print(self.vertex[index1], ' -> ',
+                      self.vertex[index2], ' : ', self.arc[index1][index2])
         return "\n"
+
 
 if __name__ == '__main__':
     test = AdjacencyMatrix(False, 'A', 'B', 'C', 'D')

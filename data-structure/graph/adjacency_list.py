@@ -1,14 +1,18 @@
 # Adjacency List
 # one is array to store vertex, another is list to store arc
+
+
 def get_next_arc(arc):
     if arc.next_arc:
         return get_next_arc(arc.next_arc)
     return arc
 
+
 def print_list_arc(arc, root):
     if arc.next_arc:
         print_list_arc(arc.next_arc, root)
     print(root.value, ' -> ', arc.to_vertex.value, ' : ', arc.weight)
+
 
 class VertexNode:
     def __init__(self, value, first_arc=None):
@@ -30,6 +34,7 @@ class VertexNode:
         print_list_arc(self.first_arc, self)
         return ''
 
+
 class ArcNode:
     to_vertex = None
     weight = 0
@@ -42,9 +47,11 @@ class ArcNode:
     def set_next_arc(self, arc):
         self.next_arc = arc
 
+
 class AdjacencyList:
     directed = False
     vertex = []
+
     def __init__(self, directed, *args):
         self.directed = directed
         self.vertex = list(args)

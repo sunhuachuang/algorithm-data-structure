@@ -5,7 +5,7 @@ class ArrayList:
 
     def __init__(self, max_size, *values):
         self.max_size = max_size
-        self.stores = { key: value for key, value in enumerate(values) }
+        self.stores = {key: value for key, value in enumerate(values)}
 
     # O(n)
     def get_key(self, value):
@@ -28,7 +28,7 @@ class ArrayList:
 
         elif set_key >= 0 and set_key < self.max_size and self.len() < (self.max_size - 1):
             for i in range(self.len(), set_key, -1):
-                self.stores[i] = self.stores[i-1]
+                self.stores[i] = self.stores[i - 1]
 
             self.stores[set_key] = value
 
@@ -36,7 +36,7 @@ class ArrayList:
     def del_element(self, del_key):
         if del_key >= 0 and del_key < (self.len() - 1):
             for i in range(del_key, self.len() - 1):
-                self.stores[i] = self.stores[i+1]
+                self.stores[i] = self.stores[i + 1]
 
             del self.stores[self.len() - 1]
 

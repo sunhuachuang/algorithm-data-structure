@@ -1,20 +1,22 @@
 # Diejkstra 迪杰斯特拉 最短路径算法 O(n^2)
 # 要求到该点的最短路径，　通过求到改点相连点的最短路径,　也就是之前点的最短路径
 
+
 def mini_path_dijkstra(graph):
     number = graph.get_number()
 
     # init
     short_vertexs = [0] * number
     short_path_weight = [0] * number
-    final = [0] * number # final[x] store Vo ~ Vx short path
+    final = [0] * number  # final[x] store Vo ~ Vx short path
     final[0] = 1
 
     for i in range(1, number):
-        short_path_weight[i] = graph.get_arc(0, i, 255) # set 255 as max weight
+        short_path_weight[i] = graph.get_arc(
+            0, i, 255)  # set 255 as max weight
 
     for i in range(1, number):
-        min = 100 # set max weight
+        min = 100  # set max weight
 
         # if has link between i, j
         for j in range(1, number):
@@ -22,12 +24,13 @@ def mini_path_dijkstra(graph):
                 k = j
                 min = short_path_weight[j]
 
-        final[k] = 1 # get short path set 1
+        final[k] = 1  # get short path set 1
         print(final)
 
         # if not has link between i, j or has short one
         for j in range(1, number):
-            if not final[j] and min + graph.get_arc(k, j, 255) < short_path_weight[j]:
+            if not final[j] and min + \
+                    graph.get_arc(k, j, 255) < short_path_weight[j]:
                 short_path_weight[j] = min + graph.get_arc(k, j)
                 short_vertexs[j] = k
 

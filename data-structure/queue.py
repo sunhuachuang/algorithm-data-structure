@@ -1,6 +1,8 @@
 # First In First Out FIFO
 # 单队列， 会出现假溢出
 # 循环队列
+
+
 class Queue:
     max_size = 0
     store = []
@@ -26,7 +28,7 @@ class Queue:
         return value
 
     def push(self, value):
-        if (self.tail_pointer+1) % self.max_size != self.top_pointer:
+        if (self.tail_pointer + 1) % self.max_size != self.top_pointer:
             if self.tail_pointer + 1 == self.max_size:
                 self.tail_pointer = 0
             else:

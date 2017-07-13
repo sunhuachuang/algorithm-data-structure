@@ -5,10 +5,12 @@
 
 from arc_array import ArcArray, Vertex, Arc
 
+
 def find_arc(link_arcs, key):
     while link_arcs[key] > 0:
         key = link_arcs[key]
     return key
+
 
 def mini_span_tree_kruskal(graph):
     number = graph.get_number()
@@ -23,7 +25,8 @@ def mini_span_tree_kruskal(graph):
         if n != m:
             link_arcs[n] = m
             print(link_arcs)
-            print(graph.get_vertex(arc.tail).value, '-->', graph.get_vertex(arc.head).value)
+            print(graph.get_vertex(arc.tail).value,
+                  '-->', graph.get_vertex(arc.head).value)
 
 
 if __name__ == '__main__':

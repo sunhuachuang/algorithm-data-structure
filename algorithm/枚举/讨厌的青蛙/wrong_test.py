@@ -12,6 +12,8 @@ a = [
 ]
 
 # xy坐标， 列为x, 行为y
+
+
 def get_all_points(lists):
     all_points = []
     for x in range(0, 7):
@@ -21,15 +23,18 @@ def get_all_points(lists):
     return all_points
 
 # * 取出两点之间所有正整数点, 必须总个数大于等于三
+
+
 def get_line_all_points(point1, point2):
     if point1 == point2:
         return
     line = [point1, point2]
-    a = (point1[1] - point2[1])/(point1[0] - point2[0])
-    b = (point1[0]*point2[1] - point1[1]*point2[0])/(point1[0] - point2[0])
+    a = (point1[1] - point2[1]) / (point1[0] - point2[0])
+    b = (point1[0] * point2[1] - point1[1] *
+         point2[0]) / (point1[0] - point2[0])
     for x in range(0, 7):
         if (x != point1[0]) and (x != point2[0]):
-            y = a*x + b
+            y = a * x + b
             if math.ceil(y) == int(y) and int(y) <= 5:
                 line.append((x, int(y)))
     if (len(line) > 2):
@@ -37,25 +42,30 @@ def get_line_all_points(point1, point2):
     return
 
 # 取出线路上的点, 必须大于三
+
+
 def line_points(line, allpoints):
     linepoints = [p for p in line if p in allpoints]
 
     if len(linepoints) >= 3:
-        return linepoints;
+        return linepoints
     return
 
 # * 取出线路上的距离相等的点
+
+
 def same_length_points(points):
     points.sort(key=lambda p: p[0])
     num = len(points)
     for key, p in enumerate(points):
-        s = (p[0]-points[key+1][0])**2 + (p[1]-points[key+1][1])**2
-        for p2 in range(key+1, num):
+        s = (p[0] - points[key + 1][0])**2 + (p[1] - points[key + 1][1])**2
+        for p2 in range(key + 1, num):
             pass
 
     if len(samelengthpoints) >= 3:
         return samelengthpoints
     return
+
 
 # 四条边有六种出入方法
 sides = {
@@ -68,7 +78,7 @@ sides = {
 allpoints = get_all_points(a)
 all_results = []
 for i, points in sides.items():
-    for j in range(i+1, 5):
+    for j in range(i + 1, 5):
         for point1 in points:
             for point2 in sides[j]:
                 line = get_line_all_points(point1, point2)

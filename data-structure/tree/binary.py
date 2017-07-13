@@ -15,12 +15,15 @@ class TwoBinaryNode:
         self.right_child = right_child
 
 # 三叉链表
+
+
 class ThreeBinaryNode:
     def __init__(self, data, left_child, right_child, parent):
         self.data = data
         self.left_child = left_child
         self.right_child = right_child
         self.parent = parent
+
 
 # 遍历二叉树
 # init
@@ -43,6 +46,8 @@ d_node.set_right_child(h_node)
 e_node.set_right_child(i_node)
 
 # 前序遍历
+
+
 def pre_order_traverse(tree):
     if not tree:
         return
@@ -50,10 +55,13 @@ def pre_order_traverse(tree):
     pre_order_traverse(tree.left_child)
     pre_order_traverse(tree.right_child)
 
+
 pre_order_traverse(a_node)
 print('--------')
 
 # 中序遍历
+
+
 def in_order_traverse(tree):
     if not tree:
         return
@@ -61,16 +69,20 @@ def in_order_traverse(tree):
     print(tree.data)
     in_order_traverse(tree.right_child)
 
+
 in_order_traverse(a_node)
 print('--------')
 
 # 后序遍历
+
+
 def post_order_traverse(tree):
     if not tree:
         return
     post_order_traverse(tree.left_child)
     post_order_traverse(tree.right_child)
     print(tree.data)
+
 
 post_order_traverse(a_node)
 
@@ -79,6 +91,8 @@ post_order_traverse(a_node)
 print('===================')
 
 # 建立二叉树（通过满二叉树）
+
+
 class StringList:
     def __init__(self, string):
         self.string_list = list(string)
@@ -89,6 +103,7 @@ class StringList:
 
     def isEmpty(self):
         return not len(self.string_list)
+
 
 def create_tree_by_pre_order(string_list):
     if string_list.isEmpty():
@@ -104,22 +119,28 @@ def create_tree_by_pre_order(string_list):
 
     return node
 
-string_list = StringList('ABDGH***CE*IF**');
+
+string_list = StringList('ABDGH***CE*IF**')
 
 test_tree = create_tree_by_pre_order(string_list)
 pre_order_traverse(test_tree)
 
 # 线索二叉树 == 双向链表二叉树 便于经常遍历和查找结点
+
+
 class ThreadedBinaryTreeNode:
-    def __init__(self, data, left_child=None, left_tag =True, right_child=None, right_tag=True):
+    def __init__(self, data, left_child=None, left_tag=True, right_child=None, right_tag=True):
         self.data = data
         self.left_child = left_child
         self.left_tag = left_tag
         self.right_child = right_child
-        self.right_tag = right_tag # right = true, right_child is right child, if false, right_child is threaded point to next.
+        # right = true, right_child is right child, if false, right_child is threaded point to next.
+        self.right_tag = right_tag
+
 
 # 中序线索化二叉树
-pre = None # 最新访问的结点
+pre = None  # 最新访问的结点
+
 
 def in_threading(tree):
     global pre

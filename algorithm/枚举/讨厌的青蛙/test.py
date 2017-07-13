@@ -14,20 +14,25 @@ a = [
 ]
 
 # xy坐标， 列为x, 行为y
+
+
 def get_all_points(lists, max_x, max_y):
     all_points = []
-    for x in range(0, max_x+1):
-        for y in range(0, max_y+1):
+    for x in range(0, max_x + 1):
+        for y in range(0, max_y + 1):
             if lists[y][x]:
                 all_points.append((x, y))
     return all_points
 
+
 def sort_points(point, points):
-    sortpoints = sorted(points, key=lambda p: (p[0]-point[0])**2+(p[1]-point[1])**2 )
+    sortpoints = sorted(points, key=lambda p: (
+        p[0] - point[0])**2 + (p[1] - point[1])**2)
     return sortpoints
 
+
 def get_line_points(prevpoint, diff_x, diff_y, allpoints, results):
-    nextpoint = (prevpoint[0]+diff_x, prevpoint[1]+diff_y)
+    nextpoint = (prevpoint[0] + diff_x, prevpoint[1] + diff_y)
     if nextpoint not in allpoints:
         if nextpoint[0] < 0 or nextpoint[0] > max_x or nextpoint[1] < 0 or nextpoint[1] > max_y:
             return results
@@ -35,6 +40,7 @@ def get_line_points(prevpoint, diff_x, diff_y, allpoints, results):
             return
     results.append(nextpoint)
     return get_line_points(nextpoint, diff_x, diff_y, allpoints, results)
+
 
 max_x = 6
 max_y = 5
@@ -44,18 +50,19 @@ allpoints = get_all_points(a, max_x, max_y)
 allresults = []
 
 for key, point1 in enumerate(allpoints[0:-1]):
-    sortpoints = sort_points(point1, allpoints[key+1:])
+    sortpoints = sort_points(point1, allpoints[key + 1:])
     for point2 in sortpoints:
         diff_x = point2[0] - point1[0]
         diff_y = point2[1] - point1[1]
         if 0 < point1[0] - diff_x < max_x and 0 < point1[1] - diff_y < max_y:
             continue
 
-        minsteppoints_x = (minstep-2) * diff_x + point2[0]
-        minsteppoints_y = (minstep-2) * diff_y + point2[1]
+        minsteppoints_x = (minstep - 2) * diff_x + point2[0]
+        minsteppoints_y = (minstep - 2) * diff_y + point2[1]
         if minsteppoints_x < 0 or minsteppoints_x > max_x or minsteppoints_y < 0 or minsteppoints_y > max_y:
             break
-        results = get_line_points(point2, diff_x, diff_y, sortpoints, [point1, point2])
+        results = get_line_points(
+            point2, diff_x, diff_y, sortpoints, [point1, point2])
         if results:
             allresults.append(results)
 

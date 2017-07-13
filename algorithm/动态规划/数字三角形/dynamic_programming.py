@@ -1,4 +1,4 @@
-#人人为我， 向上递推
+# 人人为我， 向上递推
 n = 20
 nums = [
     [5],
@@ -24,21 +24,22 @@ nums = [
 ]
 
 # 动态规划
-max_nums = [[0 for _ in range(0, i)] for i in range(1, n+1)]
+max_nums = [[0 for _ in range(0, i)] for i in range(1, n + 1)]
 
 for j in range(0, n):
-    max_nums[n-1][j] = nums[n-1][j]
+    max_nums[n - 1][j] = nums[n - 1][j]
 
-for i in range(n-2, -1, -1):
-    for k in range(0, i+1):
-        max_nums[i][k] = max(max_nums[i+1][k], max_nums[i+1][k+1]) + nums[i][k]
+for i in range(n - 2, -1, -1):
+    for k in range(0, i + 1):
+        max_nums[i][k] = max(max_nums[i + 1][k],
+                             max_nums[i + 1][k + 1]) + nums[i][k]
 
-print(max_nums[0][0]) # n(n-1)/2
+print(max_nums[0][0])  # n(n-1)/2
 
 
 # 空间优化
-for i in range(n-2, -1, -1):
-    for k in range(0, i+1):
-        nums[i][k] = max(nums[i+1][k], nums[i+1][k+1]) + nums[i][k]
+for i in range(n - 2, -1, -1):
+    for k in range(0, i + 1):
+        nums[i][k] = max(nums[i + 1][k], nums[i + 1][k + 1]) + nums[i][k]
 
 print(nums[0][0])
